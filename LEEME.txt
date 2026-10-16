@@ -1,0 +1,17 @@
+PARA MI PRINCESA — página romántica
+
+ARCHIVOS
+- index.html: página con animaciones interactivas.
+- assets/foto-principal.jpg: fotografía de fondo.
+
+CÓMO PROBAR
+Mantén index.html y la carpeta assets juntos. Abre index.html en Chrome.
+Toca/clic en cualquier parte de la página para que aparezcan corazones y estrellitas de colores.
+
+PUBLICAR GRATIS EN GITHUB PAGES
+1. Crea un repositorio público nuevo en GitHub.
+2. Sube index.html y la carpeta assets completa.
+3. En Settings > Pages, elige Deploy from a branch, selecciona main y /(root), y guarda.
+4. Cuando GitHub publique la página, crea el QR usando la URL pública.
+
+La música se ha quitado, tal como pediste.
