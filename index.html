@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100d17">
+<meta name="description" content="Una carta para mi princesa.">
+<title>Para mi princesa ♡</title>
+<style>
+:root{--cream:#f7edf0;--muted:#d6c5d1;--wine:#7d263f;--lilac:#b8a4d8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#100d17;color:var(--cream);font-family:Georgia,"Times New Roman",serif;min-height:100vh}
+.hero{position:relative;min-height:100svh;isolation:isolate;display:flex;align-items:center;justify-content:center;padding:34px 18px;overflow:hidden}
+.hero:before{content:"";position:absolute;z-index:-3;inset:-2%;background:url("assets/foto-principal.jpg") center 38%/cover no-repeat;filter:brightness(.53) saturate(.8);animation:slowzoom 24s ease-in-out infinite alternate}
+.hero:after{content:"";position:absolute;z-index:-2;inset:0;background:linear-gradient(180deg,rgba(10,11,20,.25),rgba(29,8,22,.76) 52%,#100d17 100%),radial-gradient(ellipse at 75% 25%,rgba(99,55,126,.22),transparent 48%),radial-gradient(ellipse at 15% 70%,rgba(117,25,55,.24),transparent 45%)}
+.glow{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
+.glow i{position:absolute;width:4px;height:4px;border-radius:50%;background:#c9b7ef;box-shadow:0 0 16px 4px #8971b855;opacity:.0;animation:twinkle 5s infinite}
+.glow i:nth-child(1){top:17%;left:18%;animation-delay:.5s}.glow i:nth-child(2){top:28%;right:16%;animation-delay:2s;background:#e7a0b5}.glow i:nth-child(3){top:62%;left:11%;animation-delay:3s}.glow i:nth-child(4){top:72%;right:21%;animation-delay:1s}
+.content{width:min(760px,100%);text-align:center;animation:arrive 1.7s cubic-bezier(.2,.7,.2,1) both}
+.eyebrow{font:500 .68rem/1.5 Arial,sans-serif;letter-spacing:.34em;text-transform:uppercase;color:#e4c5d4;margin-bottom:18px}
+.heart{font-size:24px;color:#d48aa5;text-shadow:0 0 22px #c04e7a66;margin-bottom:14px;animation:heartbeat 3.4s ease-in-out infinite}
+h1{font-size:clamp(2.5rem,8vw,5.2rem);font-weight:400;line-height:1.04;letter-spacing:-.035em;margin:0 auto 20px;text-shadow:0 3px 32px #0008}
+.subtitle{font:italic 1rem/1.6 Georgia,serif;color:#e0cad7;margin-bottom:26px}
+.rule{width:70px;height:1px;background:linear-gradient(90deg,transparent,#dba2ba,transparent);margin:0 auto 28px}
+.letter{width:min(650px,100%);margin:auto;text-align:left;padding:clamp(22px,5vw,40px);border:1px solid #ffffff22;border-radius:20px;background:linear-gradient(145deg,rgba(30,23,39,.52),rgba(23,12,25,.55));box-shadow:0 20px 80px #0004;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transform:translateY(18px);animation:letterin 1.4s .8s ease forwards}
+.letter p{font-size:clamp(1rem,2.5vw,1.16rem);line-height:1.9;color:#f0e5eb;margin:0 0 18px}
+.letter p:last-child{margin-bottom:0}
+.signature{text-align:center;margin-top:28px;color:#e3b4c6;font-style:italic;font-size:1.1rem}
+.music{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:12px 17px;border:1px solid #ffffff35;border-radius:999px;color:#f6eaf0;background:#21162499;font:500 .78rem Arial,sans-serif;letter-spacing:.04em;cursor:pointer;transition:background .3s,border-color .3s}
+.music:hover{background:#51253caa;border-color:#d69ab5}
+.music .dot{width:7px;height:7px;border-radius:50%;background:#d98eaa;box-shadow:0 0 12px #d98eaa}
+.note{max-width:470px;margin:12px auto 0;font: .72rem/1.6 Arial,sans-serif;color:#c6b5c5a8}
+footer{padding:0 20px 28px;text-align:center;color:#a995aa;font: .7rem Arial,sans-serif;letter-spacing:.08em}
+
+.sparkle-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:20}
+.burst{position:absolute;left:var(--x);top:var(--y);font-family:Arial,sans-serif;font-size:var(--size);line-height:1;opacity:0;transform:translate(-50%,-50%) scale(.2) rotate(0deg);animation:burst 1.25s cubic-bezier(.16,.7,.3,1) forwards;filter:drop-shadow(0 0 8px currentColor)}
+.interaction-hint{margin-top:24px;font-size:.76rem;color:#d5c2d1;letter-spacing:.02em}
+@keyframes burst{0%{opacity:0;transform:translate(-50%,-50%) scale(.2) rotate(0deg)}18%{opacity:1}75%{opacity:.95}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.15) rotate(var(--rot))}}
+
+@keyframes slowzoom{from{transform:scale(1)}to{transform:scale(1.09)}}
+@keyframes arrive{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@keyframes letterin{to{opacity:1;transform:translateY(0)}}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.6)}50%{opacity:.9;transform:scale(1.4)}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}8%{transform:scale(1.13)}16%{transform:scale(1)}24%{transform:scale(1.08)}32%{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}.letter{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<main class="hero">
+  <div class="glow" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <section class="content">
+    <div class="eyebrow">Una carta para ti</div>
+    <div class="heart" aria-hidden="true">♡</div>
+    <h1>Para mi princesa</h1>
+    <div class="subtitle">Te amodoro mucho, mi amor, muchas gracias por ser solo tú y permitirme compartir contigo momentos hermosos</div>
+    <div class="rule"></div>
+    <article class="letter">
+      <p>No sé qué nos traerá el mañana, y a veces eso me da miedo, pero contigo he aprendido que el miedo no siempre es una razón para huir; a veces es la prueba de que algo importa de verdad.</p>
+      <p>Contigo me siento vulnerable, porque sabes cosas de mí que nadie más sabe y tienes en tus manos algo que no le he dado a nadie. Y aun así, no quisiera estar en ningún otro lugar. A tu lado no necesito fingir ser fuerte, porque me haces sentir que puedo ser yo, con mis dudas y mis inseguridades, y que eso también está bien.</p>
+      <p>Por eso, aunque no tenga la certeza, sé que contigo lo arriesgaría todo, porque a tu lado hasta el miedo se convierte en una adrenalina que no tengo pensado dejar. Sin importar qué, deseo estar junto a ti muchos años más, mi princesa.</p>
+      <div class="signature">Con todo lo que soy, para ti. ♡</div>
+    </article>
+    <p class="note interaction-hint">Toca cualquier parte de la página para llenar este momento de estrellitas y corazones. ♡</p>
+    <div class="sparkle-layer" id="sparkleLayer" aria-hidden="true"></div>
+  </section>
+</main>
+<footer>HECHO CON AMOR · PARA MI PRINCESA</footer>
+<script>
+const layer = document.getElementById('sparkleLayer');
+const symbols = ['♡','♥','✦','✧','⋆','★','💜','💗','✨'];
+const colors = ['#f2a8c5','#d9b8ff','#9fcaff','#ffdae8','#c7a6ff','#ffffff','#e77aa7'];
+function burstAt(x,y){
+  const count = 15;
+  for(let i=0;i<count;i++){
+    const el=document.createElement('span');
+    el.className='burst';
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.setProperty('--x',x+'px');
+    el.style.setProperty('--y',y+'px');
+    el.style.setProperty('--dx',(Math.random()*190-95)+'px');
+    el.style.setProperty('--dy',(Math.random()*190-95)+'px');
+    el.style.setProperty('--rot',(Math.random()*100-50)+'deg');
+    el.style.setProperty('--size',(12+Math.random()*18)+'px');
+    el.style.color=colors[Math.floor(Math.random()*colors.length)];
+    layer.appendChild(el);
+    el.addEventListener('animationend',()=>el.remove(),{once:true});
+  }
+}
+document.addEventListener('pointerdown',(event)=>{
+  burstAt(event.clientX,event.clientY);
+});
+document.addEventListener('keydown',(event)=>{
+  if(event.key==='Enter'||event.key===' '){
+    burstAt(window.innerWidth/2,window.innerHeight/2);
+  }
+});
+</script>
+</body>
+</html>
